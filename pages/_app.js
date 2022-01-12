@@ -1,11 +1,16 @@
-import GlobalStyles from './../components/GlobalStyles'
+import GlobalStyles from "./../components/GlobalStyles";
+import { ThemeProvider } from "next-themes";
 
 
 function MyApp({ Component, pageProps }) {
-  return <div>
-    <GlobalStyles />
-    <Component {...pageProps} />
-  </div>
+  return (
+    <>
+      <ThemeProvider attribute="class">
+        <GlobalStyles />
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </>
+  );
 }
 
-export default MyApp
+export default MyApp;
