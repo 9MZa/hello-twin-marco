@@ -6,18 +6,21 @@ const Index = () => {
   const { theme, setTheme } = useTheme();
   return (
     <>
-
       <Head>
-        <title>Hello Twin.marco 👋</title>
+        <title>Next.JS + Twin.marco 👋</title>
         <meta name="description" content="Write tailwindcss in style-components" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div css={[tw`text-center mt-20`]}>
-        <h1 css={[tw`capitalize text-4xl dark:text-blue-500 text-blue-600 font-bold`]}>
-          hello {theme} mode
+      <div css={[tw`text-center mt-20 space-y-4`]}>
+        <h1 tw="text-4xl dark:text-blue-500 text-blue-600 font-bold">
+          Next.JS + Twin.marco 👋
         </h1>
+
+        <h3 css={[tw`capitalize text-2xl font-bold`]}>
+          and can {theme} mode now.
+        </h3>
         <div>
-          The current theme is: {theme}
+          <p tw="text-lg text-blue-500"> The current theme is: {theme} </p>
           <div>
             <Button onClick={() => setTheme("light")}>go light</Button>
           </div>
@@ -27,7 +30,6 @@ const Index = () => {
         </div>
       </div>
     </>
-
   );
 };
 
